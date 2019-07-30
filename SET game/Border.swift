@@ -21,6 +21,21 @@ import UIKit
         }
     }
     
+    var disable: Bool {
+        get{
+            return !isEnabled
+        }
+        set{
+            if newValue {
+                isEnabled = false
+                colorBorder = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+            } else {
+                isEnabled = true
+                colorBorder = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+            }
+        }
+    }
+    
     @IBInspectable var radiusCorner: CGFloat = 2.0 {
         didSet {
             layer.cornerRadius = radiusCorner

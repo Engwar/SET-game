@@ -9,25 +9,29 @@
 /* Begin PBXBuildFile section */
 		94368F2F2271D068007A91F1 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94368F2E2271D068007A91F1 /* CardDeck.swift */; };
 		94A801C622709C7E00B31B71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A801C522709C7E00B31B71 /* AppDelegate.swift */; };
-		94A801C822709C7E00B31B71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A801C722709C7E00B31B71 /* ViewController.swift */; };
 		94A801CB22709C7E00B31B71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A801C922709C7E00B31B71 /* Main.storyboard */; };
 		94A801CD22709C8100B31B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A801CC22709C8100B31B71 /* Assets.xcassets */; };
 		94A801D022709C8100B31B71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A801CE22709C8100B31B71 /* LaunchScreen.storyboard */; };
 		94A801D922709CC500B31B71 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A801D822709CC500B31B71 /* Card.swift */; };
 		94A801DC2270EA1300B31B71 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A801DB2270EA1300B31B71 /* Border.swift */; };
+		94CF6CA522EB5FA600E55017 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF6CA422EB5FA600E55017 /* Game.swift */; };
+		94CF6CA922F052CE00E55017 /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF6CA822F052CE00E55017 /* CardButton.swift */; };
+		94CF6CAD22F09BBA00E55017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF6CAC22F09BBA00E55017 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		94368F2E2271D068007A91F1 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 		94A801C222709C7E00B31B71 /* SET game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SET game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A801C522709C7E00B31B71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94A801C722709C7E00B31B71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94A801CA22709C7E00B31B71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94A801CC22709C8100B31B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94A801CF22709C8100B31B71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94A801D122709C8100B31B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94A801D822709CC500B31B71 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		94A801DB2270EA1300B31B71 /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
+		94CF6CA422EB5FA600E55017 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		94CF6CA822F052CE00E55017 /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
+		94CF6CAC22F09BBA00E55017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +64,8 @@
 		94A801C422709C7E00B31B71 /* SET game */ = {
 			isa = PBXGroup;
 			children = (
-				94A801C722709C7E00B31B71 /* ViewController.swift */,
-				94A801D822709CC500B31B71 /* Card.swift */,
-				94368F2E2271D068007A91F1 /* CardDeck.swift */,
-				94A801DB2270EA1300B31B71 /* Border.swift */,
+				94CF6C9F22EB5D9100E55017 /* Model */,
+				94CF6CA022EB5DB900E55017 /* Controller */,
 				94A801C922709C7E00B31B71 /* Main.storyboard */,
 				94A801D722709C9700B31B71 /* Support file */,
 				94A801CC22709C8100B31B71 /* Assets.xcassets */,
@@ -79,6 +81,26 @@
 				94A801CE22709C8100B31B71 /* LaunchScreen.storyboard */,
 			);
 			path = "Support file";
+			sourceTree = "<group>";
+		};
+		94CF6C9F22EB5D9100E55017 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94A801D822709CC500B31B71 /* Card.swift */,
+				94368F2E2271D068007A91F1 /* CardDeck.swift */,
+				94CF6CA422EB5FA600E55017 /* Game.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		94CF6CA022EB5DB900E55017 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94CF6CAC22F09BBA00E55017 /* ViewController.swift */,
+				94A801DB2270EA1300B31B71 /* Border.swift */,
+				94CF6CA822F052CE00E55017 /* CardButton.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A801C822709C7E00B31B71 /* ViewController.swift in Sources */,
+				94CF6CA522EB5FA600E55017 /* Game.swift in Sources */,
+				94CF6CA922F052CE00E55017 /* CardButton.swift in Sources */,
 				94368F2F2271D068007A91F1 /* CardDeck.swift in Sources */,
 				94A801DC2270EA1300B31B71 /* Border.swift in Sources */,
+				94CF6CAD22F09BBA00E55017 /* ViewController.swift in Sources */,
 				94A801D922709CC500B31B71 /* Card.swift in Sources */,
 				94A801C622709C7E00B31B71 /* AppDelegate.swift in Sources */,
 			);
