@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var strokeWidths:[CGFloat] = [ -10, 10, -10]
     var alphas:[CGFloat] = [1.0, 0.60, 0.15]
 
-    @IBOutlet var cardButtons: [SetCardButton]!{
+    @IBOutlet var cardButtons: [SetCardButton]!{  //определяем параметры карт
         didSet {
             for button in cardButtons {
                 button.strokeWidths = strokeWidths
@@ -34,37 +34,37 @@ class ViewController: UIViewController {
     
     
     private weak var timer: Timer?
-    private var _lastHint = 0
+    private var lastHint = 0
     
     @IBAction func hint() {
         timer?.invalidate()
         if  game.hints.count > 0 {
-            game.hints[_lastHint].forEach { (idx) in
+            game.hints[lastHint].forEach { (idx) in
                 let button = self.cardButtons[idx]
                 button.setBorderColor(color: Colors.hint)
             }
-            win.text = "Set \(_lastHint + 1) Wait..."
+            win.text = "Set \(lastHint + 1) Wait..."
             timer = Timer.scheduledTimer(withTimeInterval: Constants.flashTime,
                                          repeats: false) { [weak self] time in
-                                            self?.game.hints[(self?._lastHint)!].forEach { (idx) in
+                                            self?.game.hints[(self?.lastHint)!].forEach { (idx) in
                                                 let button = self?.cardButtons[idx]
                                                 button!.setBorderColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0))
                                             }
-                                            self?._lastHint =
-                                                (self?._lastHint)!.incrementCicle(in:(self?.game.hints.count)!)
+                                            self?.lastHint =
+                                                (self?.lastHint)!.incrementCicle(in:(self?.game.hints.count)!)
                                             self?.win.text = ""
                                             self?.updateButtonsFromModel()
             }
         }
     }
     
-    @IBAction func newGame() {
+    @IBAction func newGame() {  // запуск новой игры
         game = Game()
-        cardButtons.forEach { $0.setCard = nil }
+        cardButtons.forEach { $0.setCard = nil } // установка всех карт в исходное положение
         updateViewFromModel()
     }
     
-    @IBAction func dealThree() {
+    @IBAction func dealThree() { // добавляем три карты на стол
         if (game.cardsOnTable.count + 3) <= cardButtons.count {
             game.deal3()
             updateViewFromModel()
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
     
     private func updateHintButton() {
         hintButton.setTitle("\(game.hints.count ) sets", for: .normal)
-        _lastHint = 0
+        lastHint = 0
     }
     
     private func updateButtonsFromModel() {
@@ -115,7 +115,7 @@ class ViewController: UIViewController {
                         button.setBorderColor(color:
                             itIsSet ? Colors.matched: Colors.misMatched)
                     }
-                    win.text = itIsSet ? "СОВПАДЕНИЕ" :"НЕСОВПАДЕНИЕ"
+                    win.text = itIsSet ? "SET !!!" :"NOT SET"
                 }
                 //--------------------------------
             } else {

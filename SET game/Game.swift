@@ -35,7 +35,7 @@ struct Game {
                 } else {               //карты не совпали
                     score -= Points.missMatchPenalty //начисляем штраф
                 }
-                cardsTryMatched = cardsSelected
+                cardsTryMatched = cardsSelected //перемещаем массив выбранных карт в массив карт ни совпадение
                 cardsSelected.removeAll()
             } else {
                 cardsTryMatched.removeAll()
@@ -161,7 +161,7 @@ extension Array where Element : Equatable {
         /// Заменяем элементы массива на новые
         guard elements.count == new.count else {return}
         for idx in 0..<new.count {
-            if let indexMatched = self.index(of: elements[idx]){
+            if let indexMatched = self.firstIndex(of: elements[idx]){
                 self [indexMatched ] = new[idx]
             }
         }
@@ -170,7 +170,7 @@ extension Array where Element : Equatable {
     func indices(of elements: [Element]) ->[Int]{
         guard self.count >= elements.count, elements.count > 0 else {return []}
         /// Ищем индексы элементов elements у себя - self
-        return elements.map{self.index(of: $0)}.compactMap{$0}
+        return elements.map{self.firstIndex(of: $0)}.compactMap{$0}
     }
 }
 

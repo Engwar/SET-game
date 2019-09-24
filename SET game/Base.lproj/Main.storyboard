@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-hk-Tcd">
-                                <rect key="frame" x="20" y="788" width="374" height="88"/>
+                                <rect key="frame" x="20" y="774" width="374" height="88"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TxV-zG-fXa">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -49,7 +49,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIX-1q-ZcJ" customClass="BorderButton" customModule="SET_game" customModuleProvider="target">
                                                 <rect key="frame" x="127.5" y="0.0" width="119" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="NEW GAME">
+                                                <state key="normal" title="New Game">
                                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -64,7 +64,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="new" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLA-9A-pcK"/>
                                                     <action selector="newGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="1BA-5P-tgE"/>
                                                 </connections>
                                             </button>
@@ -86,30 +85,29 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="deal3" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJ4-8i-8p0"/>
                                                     <action selector="dealThree" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKf-y0-SiY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3gT-Px-q6S">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3gT-Px-q6S">
                                         <rect key="frame" x="0.0" y="48" width="374" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deck: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luG-d9-AnS">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krc-U2-1MG">
-                                                <rect key="frame" x="127.5" y="0.0" width="119" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="krc-U2-1MG">
+                                                <rect key="frame" x="124.5" y="0.0" width="125" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAw-7T-vy3">
-                                                <rect key="frame" x="254.5" y="0.0" width="119.5" height="40"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="OAw-7T-vy3">
+                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -145,7 +143,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6A1-JL-NVG"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HyE-EZ-zMQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9bt-ds-LOd" customClass="SetCardButton" customModule="SET_game" customModuleProvider="target">
@@ -170,7 +167,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wju-jU-YG4"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acQ-OF-6Sa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-eT-VLs" customClass="SetCardButton" customModule="SET_game" customModuleProvider="target">
@@ -195,7 +191,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4gB-1W-VJb"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i0n-pv-1ir"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KXe-j9-OMl" customClass="SetCardButton" customModule="SET_game" customModuleProvider="target">
@@ -220,7 +215,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mTV-XU-QdS"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsd-mI-DYB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -250,7 +244,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wdo-QL-Htr"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLk-jP-wiV"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-Wb-M7d" customClass="SetCardButton" customModule="SET_game" customModuleProvider="target">
@@ -275,7 +268,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kU-o3-YxY"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5t-1e-dRz"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dWr-1Z-19w" customClass="SetCardButton" customModule="SET_game" customModuleProvider="target">
@@ -300,7 +292,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6j-kI-hFu"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0p2-YP-R1b"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Dhf-Ne-gmK" customClass="SetCardButton" customModule="SET_game" customModuleProvider="target">
@@ -325,7 +316,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBD-V9-pwo"/>
-                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HFt-o1-smG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -740,7 +730,7 @@
                         <color key="backgroundColor" red="0.0" green="0.62736081623183892" blue="0.16097176234980851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DoV-hk-Tcd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tvg-QG-NGt" secondAttribute="bottom" constant="4" id="5n7-Xj-rvI"/>
-                            <constraint firstItem="DoV-hk-Tcd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="14" id="FCU-oV-HyL"/>
+                            <constraint firstItem="DoV-hk-Tcd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FCU-oV-HyL"/>
                             <constraint firstItem="hgE-nd-cTl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M9g-Sz-YDe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DtW-pb-IFo" secondAttribute="trailing" constant="20" id="MNz-0m-NEy"/>
                             <constraint firstItem="DoV-hk-Tcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c3q-7z-r1q"/>
@@ -750,16 +740,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="dealButton" destination="Xud-6b-zrm" id="MRn-R4-3YB"/>
                         <outlet property="dealThreeButton" destination="Xud-6b-zrm" id="G1L-1Y-COa"/>
                         <outlet property="deck" destination="luG-d9-AnS" id="jEf-Lf-Swq"/>
-                        <outlet property="deckCountLabel" destination="luG-d9-AnS" id="7tC-nT-jmH"/>
                         <outlet property="hintButton" destination="5bf-WY-iTJ" id="vs8-7L-64f"/>
-                        <outlet property="messageLabel" destination="krc-U2-1MG" id="p3i-wY-Rcm"/>
-                        <outlet property="newButton" destination="LIX-1q-ZcJ" id="W3j-9I-b1h"/>
                         <outlet property="newGameButton" destination="LIX-1q-ZcJ" id="wK6-c3-WjR"/>
                         <outlet property="score" destination="OAw-7T-vy3" id="Z33-Hp-U4B"/>
-                        <outlet property="scoreLabel" destination="OAw-7T-vy3" id="tO5-Xf-XGU"/>
                         <outlet property="win" destination="krc-U2-1MG" id="xfx-Bf-ag4"/>
                         <outletCollection property="cardButtons" destination="q3V-eT-VLs" collectionClass="NSMutableArray" id="nIP-b7-d99"/>
                         <outletCollection property="cardButtons" destination="KXe-j9-OMl" collectionClass="NSMutableArray" id="Pwy-rS-AYK"/>
